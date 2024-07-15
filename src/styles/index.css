@@ -2,16 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-html{
+html {
   background-color: #1c1a1f;
 }
-
 
 .test {
   outline: 2px solid black;
 }
 
-
-.minecraft{
+.minecraft {
   transform-style: preserve-3d;
 }
