@@ -4,7 +4,7 @@ import Hero from './components/sections/Hero';
 import ReactLenis from 'lenis/react';
 function App() {
   return (
-    <ReactLenis root>
+    <ReactLenis>
       <LazyMotion features={domAnimation}>
         <m.div className="relative flex flex-col items-center max-w-dvw min-h-dvh noise">
           <FakeLoadingScreen />

@@ -2,7 +2,7 @@ import { m } from 'framer-motion';
 import HeroBlur from '../HeroBlur';
 const Hero = () => {
   return (
-    <div className="relative w-desktop h-[2000px] flex justify-center min-h-[max-content] mt-64">
+    <div className="relative w-desktop flex justify-center min-h-[max-content] mt-64">
       <HeroBlur />
       <m.div className="w-[1000px] flex flex-col rounded-lg p-4 pt-3  whitespace-nowrap">
         <div className="flex items-center justify-evenly gap-32 font-bold figtree">

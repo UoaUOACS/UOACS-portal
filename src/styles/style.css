@@ -9,10 +9,6 @@ body,
   margin: 0;
 }
 
-#root {
-  overflow: hidden;
-}
-
 html {
   --white: 0, 0%, 100%; /*hsl(0, 0%, 100%)*/
   --foreground: 209, 40%, 86%; /* hsl(209, 40%, 86%)*/
@@ -21,6 +17,7 @@ html {
   font-family: 'Helvetica Now Display Thin';
   background-color: hsl(var(--background));
   color: hsl(var(--foreground));
+  overflow: hidden;
 }
 
 .p3d {

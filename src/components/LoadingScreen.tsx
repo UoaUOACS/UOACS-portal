@@ -18,7 +18,7 @@ const logoVariant = {
 const FakeLoadingScreen = ({ off }: FakeLoadingScreenProps) => {
   // i hope i don't need this in the future :smile:
   const giveScroll = () => {
-    document.getElementById('root')?.classList.add('!overflow-y-scroll');
+    document.getElementsByTagName('html')[0].classList.add('!overflow-y-scroll');
   };
   return (
     <>
