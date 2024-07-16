@@ -1,7 +1,9 @@
 import { UOACS } from '@/assets/svgs';
 import { m } from 'framer-motion';
 
-// interface FakeLoadingScreenProps {}
+interface FakeLoadingScreenProps {
+  off?: boolean;
+}
 
 const bgVariant = {
   initial: { background: '#000' },
@@ -9,23 +11,28 @@ const bgVariant = {
 };
 
 const logoVariant = {
-  initial: { scale: 2, top: '50%', translateY: '-50%', filter: 'blur(300px)' },
-  animate: { scale: 1, top: '0%', translateY: '0%', filter: 'blur(0px)' },
+  initial: { scale: 3, top: '50%', translateY: '-50%', filter: 'blur(300px)' },
+  animate: { scale: 1, top: '32px', translateY: '0%', filter: 'blur(0px)' },
 };
 
-const FakeLoadingScreen = () => {
+const FakeLoadingScreen = ({ off }: FakeLoadingScreenProps) => {
+  // i hope i don't need this in the future :smile:
+  const giveScroll = () => {
+    document.getElementById('root')?.classList.add('!overflow-y-scroll');
+  };
   return (
     <>
       <m.div
-        className="w-dvw h-dvh bg-black z-[999] pointer-events-none justify-center flex relative"
-        initial="initial"
+        className="w-dvw h-dvh bg-black z-[999] pointer-events-none justify-center flex absolute"
+        initial={off ? 'animate' : 'initial'}
         animate="animate"
         variants={bgVariant}
         transition={{ duration: 0.5, delay: 1.5 }}
+        onAnimationComplete={giveScroll}
       >
         <m.img
           src={UOACS}
-          className="absolute w-[200px] top-[50%]"
+          className="absolute w-[150px] top-[50%]"
           variants={logoVariant}
           transition={{
             duration: 0.5,

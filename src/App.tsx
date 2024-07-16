@@ -1,15 +1,17 @@
-import { domAnimation, LazyMotion } from 'framer-motion';
+import { domAnimation, LazyMotion, m } from 'framer-motion';
 import FakeLoadingScreen from '@components/LoadingScreen';
-import HeroBlur from './components/HeroBlur';
-
+import Hero from './components/sections/Hero';
+import ReactLenis from 'lenis/react';
 function App() {
   return (
-    <LazyMotion features={domAnimation}>
-      <div className="flex flex-col items-center max-w-dvw min-h-dwh noise">
-        <FakeLoadingScreen />
-        <HeroBlur />
-      </div>
-    </LazyMotion>
+    <ReactLenis root>
+      <LazyMotion features={domAnimation}>
+        <m.div className="relative flex flex-col items-center max-w-dvw min-h-dvh noise">
+          <FakeLoadingScreen />
+          <Hero />
+        </m.div>
+      </LazyMotion>
+    </ReactLenis>
   );
 }
 

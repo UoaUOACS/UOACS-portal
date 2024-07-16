@@ -9,12 +9,18 @@ body,
   margin: 0;
 }
 
+#root {
+  overflow: hidden;
+}
+
 html {
   --white: 0, 0%, 100%; /*hsl(0, 0%, 100%)*/
-  --primary: 240, 14%, 3%; /*hsl(240, 14%, 3%)*/
-  background-image: url('/svg/noise.svg');
-  overflow: hidden;
-  background-color: hsl(var(--primary));
+  --foreground: 209, 40%, 86%; /* hsl(209, 40%, 86%)*/
+  --background: 240, 14%, 3%; /*hsl(2240, 14%, 3%)*/
+
+  font-family: 'Helvetica Now Display Thin';
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
 }
 
 .p3d {
@@ -22,16 +28,15 @@ html {
 }
 
 .bg-blur {
-  position: absolute;
-  width: 1440px;
-  height: 800px;
+  width: 1250px;
+  height: 500px;
 
   background: radial-gradient(
     50% 50% at 50% 50%,
-    rgba(123, 123, 123, 0.4) 17.5%,
+    rgba(123, 123, 123, 0.4) 25%,
     rgba(89, 142, 228, 0.4) 72.5%,
     rgba(30, 32, 44, 0.4) 100%
   );
-  filter: blur(200px);
+  filter: blur(100px);
   border-radius: 333px;
 }

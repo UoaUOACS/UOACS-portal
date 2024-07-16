@@ -1,0 +1,45 @@
+.figtree {
+  font-family: 'Figtree';
+}
+
+.Helvetica {
+  font-family: 'Helvetica Now Display Thin';
+  background-color: black;
+}
+
+/* * Helvetica Now Display */
+
+@font-face {
+  font-family: 'Helvetica Now Display Thin';
+
+  src: local('Helvetica Now Display Thin'), local('HelveticaNowDisplay-Thin'),
+    url('./fonts/HelveticaNowDisplay-Thin.woff2') format('woff2');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Helvetica Now Display Thin';
+  src: local('Helvetica Now Display Regular'), local('HelveticaNowDisplay-Regular'),
+    url('./fonts/HelveticaNowDisplay-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Helvetica Now Display Thin';
+  src: url('./fonts/HelveticaNowDisplay-Medium.eot');
+  src: local('Helvetica Now Display Medium'), local('HelveticaNowDisplay-Medium'),
+    url('./fonts/HelveticaNowDisplay-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Helvetica Now Display Thin';
+  src: url('./fonts/HelveticaNowDisplay-Bold.eot');
+  src: local('Helvetica Now Display Bold'), local('HelveticaNowDisplay-Bold'),
+    url('./fonts/HelveticaNowDisplay-Bold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+}

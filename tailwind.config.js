@@ -4,7 +4,11 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: 'hsl(var(--primary))',
+        background: 'hsl(var(--background))',
+      },
+      width: {
+        desktop: '1440px',
+        mobile: '375px',
       },
       perspective: {
         1000: 'perspective(1000px)',
