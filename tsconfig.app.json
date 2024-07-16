@@ -10,7 +10,9 @@
 
     "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": ["src/*"],
+      "@components*": ["src/components/*"],
+      "@sections*": ["src/components/sections/*"]
     },
     /* Bundler mode */
     "moduleResolution": "bundler",
@@ -27,5 +29,5 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src"]
+  "include": ["src", "src/index.d.ts"]
 }
