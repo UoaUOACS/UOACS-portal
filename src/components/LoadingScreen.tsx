@@ -1,5 +1,6 @@
 import { UOACS } from '@/assets/svgs';
 import { m } from 'framer-motion';
+import { useLayoutEffect } from 'react';
 
 interface FakeLoadingScreenProps {
   off?: boolean;
@@ -17,8 +18,13 @@ const logoVariant = {
 
 const FakeLoadingScreen = ({ off }: FakeLoadingScreenProps) => {
   // i hope i don't need this in the future :smile:
+  useLayoutEffect(() => {
+    document.getElementById('root')?.classList.add('h-dvh');
+    document.getElementById('root')?.classList.add('overflow-hidden');
+  });
   const enableScroll = () => {
-    document.getElementsByTagName('html')[0].classList.add('!overflow-y-scroll');
+    document.getElementById('root')?.classList.remove('h-dvh');
+    document.getElementById('root')?.classList.remove('overflow-hidden');
   };
   return (
     <>
@@ -32,7 +38,7 @@ const FakeLoadingScreen = ({ off }: FakeLoadingScreenProps) => {
       >
         <m.img
           src={UOACS}
-          className="absolute w-[150px]  top-[50%]"
+          className="absolute w-[150px] top-[50%]"
           variants={logoVariant}
           transition={{
             duration: 0.5,

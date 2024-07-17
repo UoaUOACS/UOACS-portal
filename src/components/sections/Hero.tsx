@@ -4,7 +4,7 @@ import GlowButton from '../GlowButton';
 import { cn } from '@/lib/utils';
 const Hero = () => {
   return (
-    <div className="relative w-desktop flex justify-center min-h-[max-content] sm:mt-64 mt-32">
+    <div className="relative w-desktop h-[20000px] flex justify-center min-h-[max-content] sm:mt-64 mt-32">
       <HeroBlur />
       <m.div className="w-[1000px] flex flex-col rounded-lg p-4 pt-3 whitespace-nowrap">
         <div
