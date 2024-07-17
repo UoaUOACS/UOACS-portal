@@ -3,6 +3,7 @@ import HeroBlur from '../HeroBlur';
 import GlowButton from '../GlowButton';
 import { cn } from '@/lib/utils';
 import AnimatedText from '../AnimatedText';
+import { HTMLAttributes } from 'react';
 
 const textVariant = {
   initial: {
@@ -17,11 +18,19 @@ const textVariant = {
 
 const textTansition = { duration: 0.25, ease: 'easeInOut' };
 
-const Hero = () => {
+interface HeroProps extends HTMLAttributes<HTMLDivElement> {}
+
+const Hero = ({ ...props }: HeroProps) => {
   return (
-    <div className="relative xl:w-desktop w-dvw h-[2000px] flex justify-center min-h-[max-content] sm:mt-48 mt-32">
+    <div
+      {...props}
+      className={cn(
+        'relative xl:w-desktop w-dvw flex justify-center min-h-[max-content]',
+        props.className
+      )}
+    >
       <HeroBlur />
-      <m.div className="w-dvw flex flex-col rounded-lg p-4 pt-3 whitespace-nowrap">
+      <m.div className="w-dvw flex flex-col items-center rounded-lg p-4 pt-3 whitespace-nowrap">
         <div
           className={
             'flex sm:flex-row sm:text-left items-center justify-center gap-24 sm:gap-4 lg:gap-24 font-medium figtree flex-col'
@@ -50,10 +59,19 @@ const Hero = () => {
               staggerChildren={0.1}
               transition={textTansition}
             />
+            <div className="flex text-white text-xl">
+              <AnimatedText
+                text="University of Auckland Comsci Society"
+                type="letters"
+                TextVariants={{ initial: { opacity: 0 }, animate: { opacity: 1 } }}
+                delayChild={3.2}
+                transition={{ duration: 0 }}
+              />
+            </div>
           </div>
           <GlowButton
             label="Join UOACS 📝"
-            className="sm:px-24 sm:w-[min-content] w-full grow font-thin"
+            className="sm:px-24 bg-black/80 [backdrop-filter:blur(20px)] sm:w-[min-content] w-full grow font-thin"
             link="https://forms.gle/CZncuuHDTY1Vz2eP7"
             containerClassName="w-full sm:w-[min-content]"
           />

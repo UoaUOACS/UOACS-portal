@@ -11,7 +11,9 @@ interface GlowButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   label?: string;
 }
 
-const defaultBackground: string = '#e66465,#000000,#9198e5';
+// const defaultBackground: string = '#f29163,#000000,#9198e5';
+// const defaultBackground: string = '#4bc49c,#000000,#5e2ec7';
+const defaultBackground: string = '#f29163,#000000,#9198e5';
 const defaultTransition: Transition = {
   ease: 'easeInOut',
   repeat: Infinity,

@@ -4,6 +4,7 @@ import { useRef } from 'react';
 
 type AnimatedTextProps = {
   className?: string;
+
   type?: 'word' | 'letters';
   staggerChildren?: number;
   TextVariants: Variants;
