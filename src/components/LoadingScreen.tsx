@@ -19,8 +19,10 @@ const logoVariant = {
 const FakeLoadingScreen = ({ off }: FakeLoadingScreenProps) => {
   // i hope i don't need this in the future :smile:
   useLayoutEffect(() => {
-    document.getElementById('root')?.classList.add('h-dvh');
-    document.getElementById('root')?.classList.add('overflow-hidden');
+    if (!off) {
+      document.getElementById('root')?.classList.add('h-dvh');
+      document.getElementById('root')?.classList.add('overflow-hidden');
+    }
   });
   const enableScroll = () => {
     document.getElementById('root')?.classList.remove('h-dvh');

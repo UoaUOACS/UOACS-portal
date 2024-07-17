@@ -20,14 +20,6 @@
 
 @font-face {
   font-family: 'Helvetica Now Display Thin';
-  src: local('Helvetica Now Display Regular'), local('HelveticaNowDisplay-Regular'),
-    url('./fonts/HelveticaNowDisplay-Regular.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Helvetica Now Display Thin';
   src: url('./fonts/HelveticaNowDisplay-Medium.eot');
   src: local('Helvetica Now Display Medium'), local('HelveticaNowDisplay-Medium'),
     url('./fonts/HelveticaNowDisplay-Medium.woff2') format('woff2');

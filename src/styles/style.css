@@ -37,3 +37,7 @@ html {
   filter: blur(100px);
   border-radius: 333px;
 }
+
+.bgFilterGlow {
+  @apply before:[background:inherit] before:rounded-[inherit] before:blur-lg before:top-0 before:absolute before:w-full before:h-full before:flex before:-z-10;
+}

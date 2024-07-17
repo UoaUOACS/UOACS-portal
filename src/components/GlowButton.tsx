@@ -3,6 +3,7 @@ import { m, Transition } from 'framer-motion';
 import { ButtonHTMLAttributes } from 'react';
 
 interface GlowButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+  containerClassName?: string;
   className?: string;
   background?: string;
   transition?: Transition;
@@ -21,16 +22,14 @@ const GlowButton = ({
   className,
   background = defaultBackground,
   transition = defaultTransition,
+  containerClassName,
   link,
   label,
   ...props
 }: GlowButtonProps) => {
   return (
     <m.div
-      className={cn(
-        'rounded-3xl p-0.5 relative',
-        'before:[background:inherit] before:rounded-[inherit] before:blur-lg before:top-0 before:absolute before:w-full before:h-full before:flex before:-z-10'
-      )}
+      className={cn('rounded-3xl p-0.5 relative bgFilterGlow', containerClassName)}
       initial={{
         background: `linear-gradient(0turn,${background})`,
       }}
@@ -38,7 +37,7 @@ const GlowButton = ({
       transition={transition}
     >
       <a href={link}>
-        <button className={cn('bg-black p-6 px-32 rounded-[22px]', className)} {...props}>
+        <button className={cn('bg-black p-6 rounded-[22px]', className)} {...props}>
           {label}
         </button>
       </a>
