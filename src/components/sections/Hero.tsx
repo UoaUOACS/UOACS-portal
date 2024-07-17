@@ -1,26 +1,23 @@
 import { m } from 'framer-motion';
 import HeroBlur from '../HeroBlur';
+import GlowButton from '../GlowButton';
+import { cn } from '@/lib/utils';
 const Hero = () => {
   return (
-    <div className="relative w-desktop flex justify-center min-h-[max-content] mt-64">
+    <div className="relative w-desktop flex justify-center min-h-[max-content] sm:mt-64 mt-32">
       <HeroBlur />
-      <m.div className="w-[1000px] flex flex-col rounded-lg p-4 pt-3  whitespace-nowrap">
-        <div className="flex items-center justify-evenly gap-32 font-bold figtree">
-          <div className="text-9xl text-blue-600">
+      <m.div className="w-[1000px] flex flex-col rounded-lg p-4 pt-3 whitespace-nowrap">
+        <div
+          className={
+            'flex sm:flex-row sm:text-left items-center justify-center gap-24 sm:gap-4 lg:gap-24 font-bold figtree flex-col text-center'
+          }
+        >
+          <div className={cn('text-7xl text-blue-600', 'sm:text-8xl')}>
             <h1>Meet, </h1>
             <h1>Greet,</h1>
-            <h1 className="text-white">Connet</h1>
+            <h1 className="text-white">Connect</h1>
           </div>
-          <m.div
-            className="rounded-3xl p-0.5 "
-            initial={{
-              background: 'linear-gradient(0turn,#e66465, #9198e5)',
-            }}
-            animate={{ background: 'linear-gradient(1turn,#e66465, #9198e5)' }}
-            transition={{ ease: 'linear', repeat: Infinity, duration: 3 }}
-          >
-            <button className="bg-black p-6 px-32 rounded-[22px] ">Join UOACS</button>
-          </m.div>
+          <GlowButton label="Join UOACS 📝" className="sm:px-24 px-32" />
         </div>
       </m.div>
     </div>

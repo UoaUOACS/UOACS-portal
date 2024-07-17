@@ -11,13 +11,13 @@ const bgVariant = {
 };
 
 const logoVariant = {
-  initial: { scale: 3, top: '50%', translateY: '-50%', filter: 'blur(300px)' },
+  initial: { scale: 2.5, top: '50%', translateY: '-50%', filter: 'blur(300px)' },
   animate: { scale: 1, top: '32px', translateY: '0%', filter: 'blur(0px)' },
 };
 
 const FakeLoadingScreen = ({ off }: FakeLoadingScreenProps) => {
   // i hope i don't need this in the future :smile:
-  const giveScroll = () => {
+  const enableScroll = () => {
     document.getElementsByTagName('html')[0].classList.add('!overflow-y-scroll');
   };
   return (
@@ -28,11 +28,11 @@ const FakeLoadingScreen = ({ off }: FakeLoadingScreenProps) => {
         animate="animate"
         variants={bgVariant}
         transition={{ duration: 0.5, delay: 1.5 }}
-        onAnimationComplete={giveScroll}
+        onAnimationComplete={enableScroll}
       >
         <m.img
           src={UOACS}
-          className="absolute w-[150px] top-[50%]"
+          className="absolute w-[150px]  top-[50%]"
           variants={logoVariant}
           transition={{
             duration: 0.5,
