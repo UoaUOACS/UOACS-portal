@@ -31,7 +31,7 @@ export const FakeLoadingScreen = ({ off }: FakeLoadingScreenProps) => {
   return (
     <>
       <m.div
-        className="w-dvw h-dvh bg-black z-[999] pointer-events-none justify-center flex absolute"
+        className="pointer-events-none absolute z-[999] flex h-dvh w-dvw justify-center bg-black"
         initial={off ? 'animate' : 'initial'}
         animate="animate"
         variants={bgVariant}
@@ -40,7 +40,7 @@ export const FakeLoadingScreen = ({ off }: FakeLoadingScreenProps) => {
       >
         <m.img
           src={UOACS}
-          className="absolute w-[150px] top-[50%]"
+          className="absolute top-[50%] w-[150px]"
           variants={logoVariant}
           transition={{
             duration: 0.5,

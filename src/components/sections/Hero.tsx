@@ -27,21 +27,25 @@ export const Hero = ({ ...props }: HeroProps) => {
     <div
       {...props}
       className={cn(
-        'relative xl:w-desktop w-dvw flex justify-center min-h-[max-content]',
+        'relative flex min-h-[max-content] w-dvw justify-center xl:w-desktop',
         props.className
       )}
     >
       <HeroBlur />
-      <m.div className="w-dvw flex flex-col items-center rounded-lg p-4 pt-3 whitespace-nowrap">
+      <m.div className="flex w-dvw flex-col items-center whitespace-nowrap rounded-lg p-4 pt-3">
         <div
           className={
-            'flex sm:flex-row sm:text-left items-center justify-center gap-24 sm:gap-4 lg:gap-24 font-medium figtree flex-col'
+            'figtree flex flex-col items-center justify-center gap-24 font-medium sm:flex-row sm:gap-4 sm:text-left lg:gap-24'
           }
         >
-          <div className={cn('text-7xl text-blue-600 font-medium sm:text-8xl flex flex-col /')}>
+          <div
+            className={cn(
+              'flex flex-col justify-center text-7xl font-medium text-blue-600 sm:text-8xl'
+            )}
+          >
             <AnimatedText
               type="letters"
-              text="Meet"
+              text="Meet,"
               TextVariants={textVariant}
               delayChild={1.75}
               staggerChildren={0.1}
@@ -59,12 +63,12 @@ export const Hero = ({ ...props }: HeroProps) => {
               type="letters"
               text="Connect"
               TextVariants={textVariant}
-              className=" text-white"
+              className="text-white"
               delayChild={3}
               staggerChildren={0.1}
               transition={textTansition}
             />
-            <div className="flex text-white text-xl">
+            <div className="flex text-xl text-white">
               <AnimatedText
                 text="University of Auckland Comsci Society"
                 type="letters"
@@ -76,7 +80,7 @@ export const Hero = ({ ...props }: HeroProps) => {
           </div>
           <GlowButton
             label="Join UOACS 📝"
-            className="sm:px-24 bg-black/80 [backdrop-filter:blur(20px)] sm:w-[min-content] w-full grow font-thin"
+            className="w-full grow bg-black/80 font-thin [backdrop-filter:blur(20px)] sm:w-[min-content] sm:px-24"
             link="https://forms.gle/CZncuuHDTY1Vz2eP7"
             containerClassName="w-full sm:w-[min-content]"
           />

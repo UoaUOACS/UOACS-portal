@@ -11,9 +11,9 @@ function App() {
       <MotionConfig reducedMotion="user">
         <LazyMotion features={domAnimation}>
           {/* CONTENTS */}
-          <div className=" relative flex flex-col items-center max-w-dvw min-h-dvh noise overflow-x-hidden">
+          <div className="max-w-dvw noise relative flex min-h-dvh flex-col items-center overflow-x-hidden">
             <FakeLoadingScreen />
-            <Hero className="sm:mt-48 mt-32" />
+            <Hero className="mt-32 sm:mt-48" />
           </div>
           <FooterLogos />
         </LazyMotion>

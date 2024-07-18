@@ -34,7 +34,7 @@ const AnimatedText = ({
   return (
     <m.div
       ref={ref}
-      className={cn('flex', `${className}`)}
+      className={cn('flex', className)}
       transition={{
         staggerChildren: staggerChildren,
         delayChildren: delayChild,

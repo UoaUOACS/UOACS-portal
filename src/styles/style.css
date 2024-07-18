@@ -39,7 +39,7 @@ html {
 }
 
 .bgFilterGlow {
-  @apply before:[background:inherit] before:rounded-[inherit] before:blur-lg before:top-0 before:absolute before:w-full before:h-full before:flex before:-z-10;
+  @apply before:absolute before:top-0 before:-z-10 before:flex before:h-full before:w-full before:rounded-[inherit] before:blur-lg before:[background:inherit];
 }
 
 .Card-shadow {

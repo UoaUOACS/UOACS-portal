@@ -31,7 +31,7 @@ const GlowButton = ({
 }: GlowButtonProps) => {
   return (
     <m.div
-      className={cn('rounded-3xl p-0.5 relative bgFilterGlow', containerClassName)}
+      className={cn('bgFilterGlow relative rounded-3xl p-0.5', containerClassName)}
       initial={{
         background: `linear-gradient(0turn,${background})`,
       }}
@@ -39,7 +39,7 @@ const GlowButton = ({
       transition={transition}
     >
       <a href={link}>
-        <button className={cn('bg-black p-6 rounded-[22px]', className)} {...props}>
+        <button className={cn('rounded-[22px] bg-black p-6', className)} {...props}>
           {label}
         </button>
       </a>
