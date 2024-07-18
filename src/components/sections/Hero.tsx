@@ -7,12 +7,14 @@ import { HTMLAttributes } from 'react';
 
 const textVariant = {
   initial: {
-    y: -50,
+    y: -20,
     opacity: 0,
+    filter: 'blur(8px)',
   },
   animate: {
     y: 0,
     opacity: 1,
+    filter: 'blur(0px)',
   },
 };
 
@@ -20,7 +22,7 @@ const textTansition = { duration: 0.25, ease: 'easeInOut' };
 
 interface HeroProps extends HTMLAttributes<HTMLDivElement> {}
 
-const Hero = ({ ...props }: HeroProps) => {
+export const Hero = ({ ...props }: HeroProps) => {
   return (
     <div
       {...props}
@@ -38,6 +40,7 @@ const Hero = ({ ...props }: HeroProps) => {
         >
           <div className={cn('text-7xl text-blue-600 font-medium sm:text-8xl flex flex-col /')}>
             <AnimatedText
+              type="letters"
               text="Meet"
               TextVariants={textVariant}
               delayChild={1.75}
@@ -45,6 +48,7 @@ const Hero = ({ ...props }: HeroProps) => {
               transition={textTansition}
             />
             <AnimatedText
+              type="letters"
               text="Greet,"
               TextVariants={textVariant}
               delayChild={2.25}
@@ -52,6 +56,7 @@ const Hero = ({ ...props }: HeroProps) => {
               transition={textTansition}
             />
             <AnimatedText
+              type="letters"
               text="Connect"
               TextVariants={textVariant}
               className=" text-white"
@@ -80,5 +85,3 @@ const Hero = ({ ...props }: HeroProps) => {
     </div>
   );
 };
-
-export default Hero;

@@ -16,7 +16,7 @@ const logoVariant = {
   animate: { scale: 1, top: '32px', translateY: '0%', filter: 'blur(0px)' },
 };
 
-const FakeLoadingScreen = ({ off }: FakeLoadingScreenProps) => {
+export const FakeLoadingScreen = ({ off }: FakeLoadingScreenProps) => {
   // i hope i don't need this in the future :smile:
   useLayoutEffect(() => {
     if (!off) {
@@ -53,5 +53,3 @@ const FakeLoadingScreen = ({ off }: FakeLoadingScreenProps) => {
     </>
   );
 };
-
-export default FakeLoadingScreen;
