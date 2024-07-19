@@ -17,7 +17,7 @@ html {
   font-family: 'Helvetica Now Display Thin';
   background-color: hsl(var(--background));
   color: hsl(var(--foreground));
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .p3d {

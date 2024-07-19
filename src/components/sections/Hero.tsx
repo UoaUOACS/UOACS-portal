@@ -38,42 +38,44 @@ export const Hero = ({ ...props }: HeroProps) => {
             'figtree flex flex-col items-center justify-center gap-24 font-medium sm:flex-row sm:gap-4 sm:text-left lg:gap-24'
           }
         >
-          <div
-            className={cn(
-              'flex flex-col justify-center text-7xl font-medium text-blue-600 sm:text-8xl'
-            )}
-          >
+          <div className={cn('flex flex-col text-7xl font-medium text-blue-600 sm:text-8xl')}>
             <AnimatedText
               type="letters"
-              text="Meet,"
+              text="Connect,"
               TextVariants={textVariant}
               delayChild={1.75}
-              staggerChildren={0.1}
               transition={textTansition}
             />
             <AnimatedText
               type="letters"
-              text="Greet,"
+              text="Collaborate,"
               TextVariants={textVariant}
               delayChild={2.25}
-              staggerChildren={0.1}
               transition={textTansition}
             />
             <AnimatedText
               type="letters"
-              text="Connect"
+              text="Network,"
               TextVariants={textVariant}
               className="text-white"
               delayChild={3}
-              staggerChildren={0.1}
               transition={textTansition}
             />
-            <div className="flex text-xl text-white">
+            <AnimatedText
+              type="letters"
+              text="Develop"
+              TextVariants={textVariant}
+              className="text-white"
+              delayChild={3.75}
+              transition={textTansition}
+            />
+
+            <div className="mt-2 flex text-xl font-thin text-white">
               <AnimatedText
-                text="University of Auckland Comsci Society"
+                text="University of Auckland Compsci Society"
                 type="letters"
                 TextVariants={{ initial: { opacity: 0 }, animate: { opacity: 1 } }}
-                delayChild={3.2}
+                delayChild={4}
                 transition={{ duration: 0 }}
               />
             </div>
