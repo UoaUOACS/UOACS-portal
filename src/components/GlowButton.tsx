@@ -9,6 +9,7 @@ interface GlowButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   transition?: Transition;
   link?: string;
   label?: string;
+  rounded?: number;
 }
 
 // const defaultBackground: string = '#f29163,#000000,#9198e5';
@@ -31,7 +32,7 @@ const GlowButton = ({
 }: GlowButtonProps) => {
   return (
     <m.div
-      className={cn('bgFilterGlow relative rounded-3xl p-0.5', containerClassName)}
+      className={cn('relative rounded-3xl p-0.5', containerClassName)}
       initial={{
         background: `linear-gradient(0turn,${background})`,
       }}
