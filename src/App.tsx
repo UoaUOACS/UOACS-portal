@@ -4,6 +4,7 @@ import ReactLenis from 'lenis/react';
 import { Hero } from './components/sections/Hero';
 import { FooterLogos } from './components/LogosFooter';
 import { FakeLoadingScreen } from '@components/LoadingScreen';
+import AboutUOACS from './components/sections/AboutUOACS';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
             {/* <div className="Card-shadow grid aspect-square place-items-center rounded-full border-2 border-gray-700 bg-black/40 p-2 outline outline-1 outline-gray-800/20 [backdrop-filter:blur(20px)]">
               v
             </div> */}
+            <AboutUOACS />
           </div>
           <FooterLogos />
         </LazyMotion>

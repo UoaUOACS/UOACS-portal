@@ -8,7 +8,7 @@ import { discordIcon } from '@/assets/svgs';
 
 const textVariant = {
   initial: {
-    y: -20,
+    y: 0,
     opacity: 0,
   },
   animate: {
@@ -73,18 +73,18 @@ export const Hero = ({ ...props }: HeroProps) => {
               />
             </div>
           </div>
-          <div className="flex w-full flex-col gap-4">
+          <div className="flex w-full flex-col gap-4 self-end">
             <GlowButton
               label="Join UOACS 📝"
               className="w-full grow bg-black/80 font-thin [backdrop-filter:blur(20px)] sm:w-[min-content] sm:px-24"
               link="https://forms.gle/CZncuuHDTY1Vz2eP7"
               containerClassName="w-full sm:w-[min-content]"
             />
-            <div className="grid grid-flow-col gap-2 *:grow-0">
+            {/* <div className="grid grid-flow-col gap-2 *:grow-0">
               <IconButton icon={discordIcon} label="TikTok" className="bg-black" />
               <IconButton icon={discordIcon} label="Instagram" className="bg-pink-600" />
-            </div>
-            <IconButton icon={discordIcon} label="Our Discord" className="bg-[#5865F2]" />
+            </div> */}
+            <IconButton icon={discordIcon} label="Join our Discord" className="bg-[#5865F2]" />
           </div>
         </div>
       </m.div>
